@@ -9,7 +9,7 @@ import style from './App.module.css';
 
 function App() {
 
-    let [text, setText] = useState([
+    let [texts, setText] = useState([
         {id: v1(), text: 'качество 1', active: true},
         {id: v1(), text: 'качество 2', active: false},
         {id: v1(), text: 'качество 3', active: true}
@@ -18,7 +18,7 @@ function App() {
     return (
         <div className={style.wrapper}>
             <Message/>
-            <Qualities text={text}/>
+            <Qualities texts={texts}/>
         </div>
     );
 }

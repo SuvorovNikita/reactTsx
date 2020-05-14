@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./qualities.module.css"
+import styles from "./qualities.module.css";
 
 
 type TextType = {
@@ -9,14 +9,14 @@ type TextType = {
 }
 
 type PropsType = {
-    text: Array<TextType>
+    texts: Array<TextType>
 }
 
 function Qualities(props: PropsType) {
-    let text = props.text.map(t => <div key={t.id}>{t.text}</div>);
+    let textsElement = props.texts.map(t => <div className={t.active ? styles.textActive : styles.text } key={t.id}>{t.text}</div>);
     return (
         <div>
-            {text}
+            {textsElement}
         </div>
     )
 }
