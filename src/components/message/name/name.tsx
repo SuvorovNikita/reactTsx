@@ -5,6 +5,7 @@ type PropsType = {
     name: string
 }
 
+
 function Name(props:PropsType) {
     return (
         <div>

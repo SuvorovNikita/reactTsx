@@ -1,0 +1,21 @@
+
+.form {
+    padding: 50px 50px;
+    text-align: center;
+    background: #0e1621;
+}
+
+span {
+    margin-right: 20px;
+    color: #fff;
+}
+
+button {
+    background: #6d7f8f;
+    border: none;
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    height: 21px;
+    color: #fff;
+}

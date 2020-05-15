@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./qualities.module.css";
+import style from "./qualities.module.css"
 
 
 type TextType = {
-    text: string
+    texts: string
     id: string
     active: boolean
 }
@@ -13,10 +13,10 @@ type PropsType = {
 }
 
 function Qualities(props: PropsType) {
-    let textsElement = props.texts.map(t => <div className={t.active ? styles.textActive : styles.text } key={t.id}>{t.text}</div>);
+    let textsElements = props.texts.map(t => <div className={t.active ? style.textActive : style.text} key={t.id}>{t.texts}</div>);
     return (
         <div>
-            {textsElement}
+           <h3 className={style.map}>{textsElements}</h3>
         </div>
     )
 }

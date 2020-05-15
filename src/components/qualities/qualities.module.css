@@ -1,7 +1,12 @@
 .text {
-    color: #b48bb8;
+    color: #fff;
 }
 
 .textActive {
-    color: tomato;
+    color: #b48bb8;
+}
+
+.map {
+    text-align: center;
+    background: #0e1621;
 }
