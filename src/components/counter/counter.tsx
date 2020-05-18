@@ -1,25 +1,27 @@
-import React, {useState} from "react";
-import style from "./counter.module.css";
-import {log} from "util";
+import React, {useState} from 'react';
+import style from './counter.module.css';
 
 
 function Counter() {
 
-    let [counts, setCounts] = useState([{
-        counter: 0
-    }]);
+    let [counts, setCounts] = useState(0);
+    let [text, setText] = useState('');
 
-    function counterUp() {
-        let newCounter = {counter: +1};
-        let newCount=[newCounter, ...counts];
-        setCounts(newCount);
+
+    function counterUpdate() {
+        setCounts(+1);
+        setText(text);
+        alert('Привет' + ' ' + (text));
+        setText('');
     }
 
 
     return (<form className={style.form}>
-            <span>{counts[0].counter}</span>
-            <input/>
-            <button onClick={counterUp}>Click</button>
+            <span>{counts}</span>
+            <input type='text' value={text} onChange={e => {
+                setText(e.currentTarget.value)
+            }}/>
+            <button onClick={counterUpdate}>Click</button>
         </form>
     )
 }
