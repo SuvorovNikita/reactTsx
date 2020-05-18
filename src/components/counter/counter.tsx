@@ -20,14 +20,9 @@ const Counter = (props: PropsType) => {
     function upName(name: string) {
         setCounts(counts + 1);
         addName(name);
+        alert('Привет' + ' ' + (name));
         setName('');
     }
-
-    function addStateName() {
-        upName('');
-        alert('Привет' + ' ' + (name));
-    }
-
 
     function onChangeText(e: ChangeEvent<HTMLInputElement>) {
         setName(e.currentTarget.value)
@@ -36,7 +31,7 @@ const Counter = (props: PropsType) => {
     return (<div className={style.form}>
             <span>{counts}</span>
             <input type='text' value={name} onChange={onChangeText}/>
-            <button onClick={addStateName}>Click
+            <button onClick={()=>{upName(name)}}>Click
             </button>
         </div>
     )
