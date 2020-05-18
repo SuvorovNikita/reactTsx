@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import style from './counter.module.css';
 
 
@@ -15,12 +15,14 @@ function Counter() {
         setText('');
     }
 
+    function onChangeText(e: ChangeEvent<HTMLInputElement>) {
+        setText(e.currentTarget.value);
+    }
+
 
     return (<form className={style.form}>
             <span>{counts}</span>
-            <input type='text' value={text} onChange={e => {
-                setText(e.currentTarget.value)
-            }}/>
+            <input type='text' value={text} onChange={onChangeText}/>
             <button onClick={counterUpdate}>Click</button>
         </form>
     )
