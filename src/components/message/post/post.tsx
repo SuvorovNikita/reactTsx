@@ -5,10 +5,11 @@ type PropsType = {
     message: string
 }
 
-function Post(props: PropsType) {
+const Post = (props: PropsType) => {
+    const {message} = props;
     return (
         <div>
-            <p className={style.text}>{props.message} </p>
+            <p className={style.text}>{message} </p>
         </div>
     )
 }

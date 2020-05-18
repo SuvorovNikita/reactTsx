@@ -2,30 +2,28 @@ import React, {ChangeEvent, useState} from 'react';
 import style from './counter.module.css';
 
 
-function Counter() {
+const Counter = () => {
 
     let [counts, setCounts] = useState(0);
-    let [text, setText] = useState('');
+    let [name, setName] = useState('');
 
 
     function counterUpdate() {
-        setCounts(+1);
-        setText(text);
-        alert('Привет' + ' ' + (text));
-        setText('');
+        setCounts(counts + 1);
+        alert('Привет' + ' ' + (name));
+        setName('');
     }
 
     function onChangeText(e: ChangeEvent<HTMLInputElement>) {
-        setText(e.currentTarget.value);
+        setName(e.currentTarget.value)
     }
 
-
-    return (<form className={style.form}>
+    return (<div className={style.form}>
             <span>{counts}</span>
-            <input type='text' value={text} onChange={onChangeText}/>
+            <input type='text' value={name} onChange={onChangeText}/>
             <button onClick={counterUpdate}>Click</button>
-        </form>
+        </div>
     )
-}
+};
 
 export default Counter;

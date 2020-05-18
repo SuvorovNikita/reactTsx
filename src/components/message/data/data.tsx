@@ -5,10 +5,11 @@ type PropsType = {
     time: string
 }
 
-function Data(props:PropsType) {
+const Data = (props: PropsType) => {
+    const {time} = props;
     return (
         <div>
-            <p className={style.time}>{props.time}</p>
+            <p className={style.time}>{time}</p>
         </div>
     )
 }

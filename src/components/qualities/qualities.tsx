@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./qualities.module.css"
+import style from "./qualities.module.css";
 
 
 type TextType = {
@@ -12,13 +12,15 @@ type PropsType = {
     texts: Array<TextType>
 }
 
-function Qualities(props: PropsType) {
-    let textsElements = props.texts.map(t => <div className={t.active ? style.textActive : style.text} key={t.id}>{t.texts}</div>);
+const Qualities = (props: PropsType) => {
+    const {texts} = props;
+    let textsElements = texts.map(t => <div className={t.active ? style.textActive : style.text}
+                                            key={t.id}>{t.texts}</div>);
     return (
         <div>
-           <h3 className={style.map}>{textsElements}</h3>
+            <h3 className={style.map}>{textsElements}</h3>
         </div>
     )
-}
+};
 
 export default Qualities;

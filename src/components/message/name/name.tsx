@@ -6,10 +6,12 @@ type PropsType = {
 }
 
 
-function Name(props:PropsType) {
+const Name = (props: PropsType) => {
+    const {name} = props;
+
     return (
         <div>
-            <h3 className={style.name}>{props.name}</h3>
+            <h3 className={style.name}>{name}</h3>
         </div>
     )
 }

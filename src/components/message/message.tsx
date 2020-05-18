@@ -7,7 +7,7 @@ import Name from "./name/name";
 import style from './message.module.css';
 
 
-function Message() {
+const Message=()=> {
     return (
         <div className={style.wrapper}>
             <Avatar/>
@@ -18,6 +18,6 @@ function Message() {
             </div>
         </div>
     )
-}
+};
 
 export default Message;
