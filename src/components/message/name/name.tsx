@@ -8,7 +8,6 @@ type PropsType = {
 
 const Name = (props: PropsType) => {
     const {name} = props;
-
     return (
         <div>
             <h3 className={style.name}>{name}</h3>

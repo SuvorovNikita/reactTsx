@@ -16,12 +16,22 @@ const App = () => {
         {id: v1(), texts: 'качество 3', active: false}
     ]);
 
+    let [names, setNames] = useState([
+        {id: v1(), names: "Name"}
+    ]);
 
+    function addName(name: string) {
+        let newName = {id: v1(), names: name};
+        let updateName = [newName, ...names];
+        setNames(updateName);
+    }
     return (
         <div className={style.wrapper}>
             <Message/>
             <Qualities texts={texts}/>
-            <Counter />
+            <Counter
+                addName={addName}
+                names={names}/>
         </div>
     );
 };

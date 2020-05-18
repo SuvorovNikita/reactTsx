@@ -1,17 +1,33 @@
 import React, {ChangeEvent, useState} from 'react';
 import style from './counter.module.css';
 
+type NamesType = {
+    id: string
+    names: string
+}
 
-const Counter = () => {
+type PropsType = {
+    names: Array<NamesType>
+    addName: (name: string) => void
+}
+
+const Counter = (props: PropsType) => {
 
     let [counts, setCounts] = useState(0);
     let [name, setName] = useState('');
+    let {addName} = props;
 
-
-    function counterUpdate() {
+    function upName(name: string) {
         setCounts(counts + 1);
+        addName(name);
         setName('');
     }
+
+    function addStateName() {
+        upName('');
+        alert('Привет' + ' ' + (name));
+    }
+
 
     function onChangeText(e: ChangeEvent<HTMLInputElement>) {
         setName(e.currentTarget.value)
@@ -20,7 +36,8 @@ const Counter = () => {
     return (<div className={style.form}>
             <span>{counts}</span>
             <input type='text' value={name} onChange={onChangeText}/>
-            <button onClick={counterUpdate}>Click</button>
+            <button onClick={addStateName}>Click
+            </button>
         </div>
     )
 };

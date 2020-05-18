@@ -7,7 +7,7 @@ import Name from "./name/name";
 import style from './message.module.css';
 
 
-const Message=()=> {
+const Message = () => {
     return (
         <div className={style.wrapper}>
             <Avatar/>
