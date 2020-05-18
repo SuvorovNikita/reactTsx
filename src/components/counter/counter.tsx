@@ -10,7 +10,6 @@ const Counter = () => {
 
     function counterUpdate() {
         setCounts(counts + 1);
-        alert('Привет' + ' ' + (name));
         setName('');
     }
 
