@@ -25,13 +25,12 @@ const App = () => {
         let updateName = [newName, ...names];
         setNames(updateName);
     }
+
     return (
         <div className={style.wrapper}>
             <Message/>
             <Qualities texts={texts}/>
-            <Counter
-                addName={addName}
-                names={names}/>
+            <Counter addName={addName} names={names}/>
         </div>
     );
 };

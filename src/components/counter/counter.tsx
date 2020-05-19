@@ -31,8 +31,7 @@ const Counter = (props: PropsType) => {
     return (<div className={style.form}>
             <span>{counts}</span>
             <input type='text' value={name} onChange={onChangeText}/>
-            <button onClick={()=>{upName(name)}}>Click
-            </button>
+            <button onClick={()=>{upName(name)}}>Click</button>
         </div>
     )
 };
