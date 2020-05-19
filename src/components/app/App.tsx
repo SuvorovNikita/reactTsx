@@ -13,8 +13,8 @@ const App = () => {
     let [texts] = useState([
         {id: v1(), texts: 'качество 1', active: false},
         {id: v1(), texts: 'качество 2', active: true},
-        {id: v1(), texts: 'качество 3', active: false}
-        {id: v1(), texts: 'качество 3', active: false}
+        {id: v1(), texts: 'качество 3', active: false},
+
     ]);
 
     let [names, setNames] = useState([
