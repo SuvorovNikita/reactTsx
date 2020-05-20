@@ -28,7 +28,7 @@ const Counter = (props: PropsType) => {
             addName(name);
             alert('Привет' + ' ' + (name));
             setName('');
-        } else setError(style);
+        } else setError(style)
     }
 
     function onChangeText(e: ChangeEvent<HTMLInputElement>) {

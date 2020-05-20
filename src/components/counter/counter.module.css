@@ -8,6 +8,7 @@
 input{
     border-color: #6d7f8f;
     outline: none;
+    padding-left: 6px;
 }
 
 span {
@@ -30,7 +31,4 @@ button {
     border: solid 2px lightcoral;
     border-radius: 20px;
     transition: all .2s linear ;
-}
-.default {
-    border: none;
 }
