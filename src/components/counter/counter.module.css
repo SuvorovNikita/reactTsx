@@ -5,6 +5,11 @@
     background: #0e1621;
 }
 
+input{
+    border-color: #6d7f8f;
+    outline: none;
+}
+
 span {
     margin-right: 20px;
     color: #fff;
@@ -18,4 +23,14 @@ button {
     cursor: pointer;
     height: 21px;
     color: #fff;
+    outline: none;
+}
+
+.error {
+    border: solid 2px lightcoral;
+    border-radius: 20px;
+    transition: all .2s linear ;
+}
+.default {
+    border: none;
 }
