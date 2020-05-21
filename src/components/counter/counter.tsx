@@ -1,6 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import style from './counter.module.css';
 import Button from "../../ui/button/button";
+import Input from "../../ui/input/input";
 
 
 type NamesType = {
@@ -20,7 +21,7 @@ const Counter = (props: PropsType) => {
     let [error, setError] = useState();
 
     let {addName} = props;
-    let styleError = error ? style.error : '';
+    // let styleError = error ? style.error : '';
 
 
     function upName(name: string) {
@@ -53,7 +54,13 @@ const Counter = (props: PropsType) => {
     return (<div className={style.form}>
             {nameElement}
             <span>{counts}</span>
-            <input type='text' value={name} className={styleError} onKeyPress={onKeyEnter} onChange={onChangeText}/>
+            <Input
+                type='text'
+                name={name}
+                error={error}
+                onChangeText={onChangeText}
+                onKeyEnter={onKeyEnter}
+            />
             <Button onClick={onClickName}/>
         </div>
     )
