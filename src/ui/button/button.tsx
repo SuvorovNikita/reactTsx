@@ -1,9 +1,16 @@
 import React from "react";
 
-
-const Button = () => {
+type PropsType = {
+    onClick?: () => void
+}
+const Button = (props: PropsType) => {
+    function addClickName() {
+        if (props.onClick) {
+            props.onClick();
+        }
+    }
     return (
-        <div></div>
+        <button onClick={addClickName}>Click</button>
     )
 };
 export default Button;

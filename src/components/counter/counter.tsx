@@ -48,14 +48,13 @@ const Counter = (props: PropsType) => {
         upName(name)
     };
 
-    let nameElement = props.names.map(n=><p className={style.name}>{n.names}</p>);
+    let nameElement = props.names.map(n => <p className={style.name}>{n.names}</p>);
 
     return (<div className={style.form}>
             {nameElement}
             <span>{counts}</span>
             <input type='text' value={name} className={styleError} onKeyPress={onKeyEnter} onChange={onChangeText}/>
-            <Button />
-            <button onClick={onClickName}>Click</button>
+            <Button onClick={onClickName}/>
         </div>
     )
 };
