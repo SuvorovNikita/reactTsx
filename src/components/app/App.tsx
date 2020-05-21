@@ -17,7 +17,7 @@ const App = () => {
     ]);
 
     let [names, setNames] = useState([
-        {id: v1(), names: "Name"}
+        {id: v1(), names: ""}
     ]);
 
     function addName(name: string) {

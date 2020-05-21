@@ -3,6 +3,7 @@
     padding: 50px 50px;
     text-align: center;
     background: #0e1621;
+
 }
 
 input{
@@ -31,4 +32,8 @@ button {
     border: solid 2px lightcoral;
     border-radius: 20px;
     transition: all .2s linear ;
+}
+.name {
+    color: #fff;
+
 }
