@@ -35,7 +35,8 @@ const Counter = (props: PropsType) => {
     }
 
     function onChangeText(e: ChangeEvent<HTMLInputElement>) {
-        setName(e.currentTarget.value)
+        setName(e.currentTarget.value);
+
     }
 
     function onKeyEnter(e: KeyboardEvent<HTMLInputElement>) {
@@ -49,7 +50,7 @@ const Counter = (props: PropsType) => {
         upName(name)
     };
 
-    let nameElement = props.names.map(n => <p className={style.name}>{n.names}</p>);
+    let nameElement = props.names.map(n => <p key={n.id} className={style.name}>{n.names}</p>);
 
     return (<div className={style.form}>
             {nameElement}
