@@ -15,8 +15,8 @@ type PropsType = {
 
 
 const Qualities = (props: PropsType) => {
-    let {texts} = props;
-    let textsElement = texts.map(t => <Qualitie key={t.id} t={t}/>);
+
+    let textsElement = props.texts.map(t => <Qualitie key={t.id} t={t}/>);
     return (
         <div className={styles.map}>
             {textsElement}

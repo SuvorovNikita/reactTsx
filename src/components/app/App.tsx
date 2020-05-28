@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
+import { Route} from 'react-router-dom';
 import {v1} from "uuid";
 
-import Message from "../message/message";
-import Qualities from "../qualities/qualities";
-import Counter from "../counter/counter";
 import Menu from "../menu/menu";
+import Monday from '../monday/monday';
+import Tuesday from "../tuesday/tuesday";
 
 import style from './App.module.css';
+
 
 
 const App = () => {
@@ -21,25 +22,18 @@ const App = () => {
         {id: v1(), names: ""}
     ]);
 
-    let [menu] = useState([
-        {id: v1(), linkName: 'Один', isActive: false},
-        {id: v1(), linkName: 'Два', isActive: true}
-    ])
-
-
     function addName(name: string) {
         let newName = {id: v1(), names: name};
         let updateName = [newName, ...names];
         setNames(updateName);
     }
 
-
     return (
+
         <div className={style.wrapper}>
-            <Menu menu={menu}/>
-            <Message/>
-            <Qualities texts={texts}/>
-            <Counter addName={addName} names={names}/>
+            <Menu/>
+            <Route path='/monday' component={Monday} />
+            <Route path='/tuesday' component={Tuesday}/>
         </div>
     );
 };
