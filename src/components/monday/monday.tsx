@@ -10,15 +10,20 @@ type TypeTexts = {
     active: boolean
 }
 
-type ArrayTexts = {
+type TypeNames = {
+    id: string
+    names: string
+}
+
+type PropsType = {
     texts: Array<TypeTexts>
-    addName: (name: string) => any
-    names:(any)
+    names: Array<TypeNames>
+    addName: (name: string) => void
 
 }
 
-const Monday = (props: ArrayTexts) => {
-    let {texts, names, addName} = props
+const Monday = (props: PropsType) => {
+    let {texts, addName, names} = props;
     return (
         <div>
             <Message/>

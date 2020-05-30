@@ -1,5 +1,31 @@
 
-.menuWrapper {
+.nav {
     text-align: center;
     margin-top: 25px;
+    display: none;
+
+
+}
+
+.navActive {
+    display: flex;
+    justify-content: center;
+}
+
+
+.link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.link:last-child {
+    margin: 0;
+}
+
+.active {
+    color: #b48bb8;
+}
+.wrapperBtn {
+    margin-top: 20px;
 }
