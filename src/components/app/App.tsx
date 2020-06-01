@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Route} from 'react-router-dom';
+import { Route} from 'react-router-dom';
 import {v1} from "uuid";
 
 import Menu from "../menu/menu";
@@ -7,6 +7,7 @@ import Monday from '../monday/monday';
 import Tuesday from "../tuesday/tuesday";
 
 import style from './App.module.css';
+
 
 
 const App = () => {
@@ -28,11 +29,10 @@ const App = () => {
     }
 
     return (
+
         <div className={style.wrapper}>
-            <Menu />
-            <Route path='/monday' render={() => <Monday texts={texts}
-                                                        addName={addName}
-                                                        names={names}/>}/>
+            <Menu/>
+            <Route path='/monday' component={Monday} />
             <Route path='/tuesday' component={Tuesday}/>
         </div>
     );
