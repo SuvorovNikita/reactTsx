@@ -1,7 +1,15 @@
-import React from "react";
+import React, {ChangeEvent, KeyboardEvent} from "react";
 import style from "../../components/counter/counter.module.css";
 
-const Input = (props: any) => {
+type PropsType = {
+    type: string
+    name: string
+    error: string
+    onKeyEnter: (e: KeyboardEvent<HTMLInputElement>) => void
+    onChangeText: (e: ChangeEvent<HTMLInputElement>) => void
+}
+
+const Input = (props: PropsType) => {
     let {type, name, onKeyEnter, onChangeText, error} = props;
     let styleError = error ? style.error : '';
     return (<div>
