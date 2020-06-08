@@ -12,13 +12,12 @@ type PropsType = {
 const Input = (props: PropsType) => {
     let {type, name, onKeyEnter, onChangeText, error} = props;
     let styleError = error ? style.error : '';
-    return (<div>
-        <input type={type}
-               value={name}
-               className={styleError}
-               onKeyPress={onKeyEnter}
-               onChange={onChangeText}/>
-    </div>)
+    return <input type={type}
+                  value={name}
+                  className={styleError}
+                  onKeyPress={onKeyEnter}
+                  onChange={onChangeText}/>
+
 };
 
 export default Input;
