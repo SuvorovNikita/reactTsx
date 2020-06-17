@@ -11,7 +11,7 @@ import style from './App.module.css';
 
 const App = () => {
 
-    let [texts] = useState([
+    let [texts, setText] = useState([
         {id: v1(), texts: 'качество 1', active: false},
         {id: v1(), texts: 'качество 2', active: true},
         {id: v1(), texts: 'качество 3', active: false},
@@ -21,6 +21,13 @@ const App = () => {
         {id: v1(), names: ""}
     ]);
 
+    let [prof, setProf] = useState([
+        {profession: 'Jun', id: v1()},
+        {profession: 'Mid', id: v1()},
+        {profession: 'HR', id: v1()}
+    ])
+
+
     function addName(name: string) {
         let newName = {id: v1(), names: name};
         let updateName = [newName, ...names];
@@ -29,11 +36,11 @@ const App = () => {
 
     return (
         <div className={style.wrapper}>
-            <Menu />
-            <Route path='/monday' render={() => <Monday texts={texts}
-                                                        addName={addName}
-                                                        names={names}/>}/>
-            <Route path='/tuesday' component={Tuesday}/>
+            <Menu/>
+            <Route path='/preJunior' render={() => <Monday texts={texts}
+                                                           addName={addName}
+                                                           names={names}/>}/>
+            <Route path='/Junior' component={Tuesday}/>
         </div>
     );
 };

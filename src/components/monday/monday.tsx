@@ -4,7 +4,7 @@ import Qualities from "../qualities/qualities";
 import Counter from "../counter/counter";
 
 
-type TypeTexts = {
+export type TypeTexts = {
     id: string
     texts: string
     active: boolean
@@ -27,7 +27,9 @@ const Monday = (props: PropsType) => {
     return (
         <div>
             <Message/>
-            <Qualities texts={texts}/>
+            <Qualities
+                texts={texts}
+            />
             <Counter addName={addName} names={names}/>
         </div>
     )

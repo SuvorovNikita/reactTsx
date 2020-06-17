@@ -3,13 +3,13 @@ import styles from "./qualities.module.css";
 import Qualitie from "./qualitie/qualitie";
 
 
-type TextType = {
+export type TextType = {
     texts: string
     id: string
     active: boolean
 }
 
-type PropsType = {
+export type PropsType = {
     texts: Array<TextType>
 }
 

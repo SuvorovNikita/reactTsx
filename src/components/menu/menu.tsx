@@ -18,8 +18,9 @@ const Menu = () => {
         <div>
            <div className={style.wrapperBtn}><button onClick={activeMenu}>Menu</button></div>
             <nav className={menuActive}>
-                <NavLink activeClassName={style.active} className={style.link} to="/monday">Monday</NavLink>
-                <NavLink activeClassName={style.active} className={style.link} to="/tuesday">Tuesday</NavLink>
+                <NavLink activeClassName={style.active} className={style.link} to="/preJunior">preJunior</NavLink>
+                <NavLink activeClassName={style.active} className={style.link} to="/Junior">Junior</NavLink>
+                <NavLink activeClassName={style.active} className={style.link} to="/Junior+">Junior+</NavLink>
             </nav>
         </div>
 
