@@ -22,11 +22,25 @@ const App = () => {
     ]);
 
     let [prof, setProf] = useState([
-        {profession: 'Jun', id: v1()},
-        {profession: 'Mid', id: v1()},
-        {profession: 'HR', id: v1()}
-    ])
+        {id: v1(), profession: 'Дела', isActive: false},
+        {id: v1(), profession: 'Дела', isActive: false},
+        {id: v1(), profession: 'ДелаВажные', isActive: true}
+    ]);
 
+    let [filter, setFilter] = useState('all')
+
+    let filterProf = prof
+    if (filter === 'low') {
+        filterProf = prof.filter(p => !p.isActive)
+    }
+    if (filter === 'height') {
+        filterProf = prof.filter(p => p.isActive)
+    }
+
+
+    function filterProff(value: 'all' | 'low' | 'height') {
+        setFilter(value)
+    }
 
     function addName(name: string) {
         let newName = {id: v1(), names: name};
@@ -34,10 +48,19 @@ const App = () => {
         setNames(updateName);
     }
 
+    function deleteProff(id: string) {
+        let delProf = prof.filter(p => p.id !== id)
+        setProf(delProf)
+    }
+
+
     return (
         <div className={style.wrapper}>
             <Menu/>
             <Route path='/preJunior' render={() => <Monday texts={texts}
+                                                           prof={filterProf}
+                                                           filterProff={filterProff}
+                                                           deleteProff={deleteProff}
                                                            addName={addName}
                                                            names={names}/>}/>
             <Route path='/Junior' component={Tuesday}/>

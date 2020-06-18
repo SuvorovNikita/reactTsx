@@ -11,6 +11,7 @@ export type TextType = {
 
 export type PropsType = {
     texts: Array<TextType>
+
 }
 
 
