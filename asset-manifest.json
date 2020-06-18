@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/reactTsx/static/css/main.e5291871.chunk.css",
-    "main.js": "/reactTsx/static/js/main.fea74150.chunk.js",
-    "main.js.map": "/reactTsx/static/js/main.fea74150.chunk.js.map",
+    "main.css": "/reactTsx/static/css/main.b87b571c.chunk.css",
+    "main.js": "/reactTsx/static/js/main.fb6f0d58.chunk.js",
+    "main.js.map": "/reactTsx/static/js/main.fb6f0d58.chunk.js.map",
     "runtime-main.js": "/reactTsx/static/js/runtime-main.4ec33f78.js",
     "runtime-main.js.map": "/reactTsx/static/js/runtime-main.4ec33f78.js.map",
     "static/js/2.ff3ac44b.chunk.js": "/reactTsx/static/js/2.ff3ac44b.chunk.js",
     "static/js/2.ff3ac44b.chunk.js.map": "/reactTsx/static/js/2.ff3ac44b.chunk.js.map",
     "index.html": "/reactTsx/index.html",
-    "precache-manifest.e1b2c2681b98db4ff0f4e258a452959e.js": "/reactTsx/precache-manifest.e1b2c2681b98db4ff0f4e258a452959e.js",
+    "precache-manifest.cbac51e8dc4bd882436c094a1f933bd5.js": "/reactTsx/precache-manifest.cbac51e8dc4bd882436c094a1f933bd5.js",
     "service-worker.js": "/reactTsx/service-worker.js",
-    "static/css/main.e5291871.chunk.css.map": "/reactTsx/static/css/main.e5291871.chunk.css.map",
+    "static/css/main.b87b571c.chunk.css.map": "/reactTsx/static/css/main.b87b571c.chunk.css.map",
     "static/js/2.ff3ac44b.chunk.js.LICENSE.txt": "/reactTsx/static/js/2.ff3ac44b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4ec33f78.js",
     "static/js/2.ff3ac44b.chunk.js",
-    "static/css/main.e5291871.chunk.css",
-    "static/js/main.fea74150.chunk.js"
+    "static/css/main.b87b571c.chunk.css",
+    "static/js/main.fb6f0d58.chunk.js"
   ]
 }
